@@ -29,7 +29,6 @@ document.addEventListener('click', function(event) {
 
 // Effet de scroll sur la navbar
 let lastScrollY = window.scrollY;
-
 window.addEventListener('scroll', function() {
     const navbar = document.getElementById('navbar');
     const currentScrollY = window.scrollY;
