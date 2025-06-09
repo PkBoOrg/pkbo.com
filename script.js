@@ -35,10 +35,10 @@ window.addEventListener('scroll', function() {
     const currentScrollY = window.scrollY;
     
     if (currentScrollY > 100) {
-        navbar.classList.add('scrolled');
+        //navbar.classList.add('scrolled');
         //navbar.style.position = 'fixed';
     } else {
-        navbar.classList.remove('scrolled');
+        //navbar.classList.remove('scrolled');
         //navbar.style.position = 'relative';
     }
     

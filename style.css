@@ -44,6 +44,7 @@ body {
 
 .nav-logo {
     display: flex;
+    width: 180px;
     align-items: center;
     text-decoration: none;
     color: white;
@@ -55,7 +56,8 @@ body {
     z-index: 2;
 }
 
-.navbar.logo {
+.nav-logo img {
+    width: 100px;
     vertical-align: middle;
 }
 
@@ -91,7 +93,7 @@ body {
 }
 
 .navbar.scrolled .nav-link {
-    color: #6b7280;
+    color: #3b3e45;
 }
 
 .nav-link::before {
@@ -278,6 +280,7 @@ body {
 
     .nav-logo {
         font-size: 18px;
+        width: 100px;
     }
 
     .cta-button {
