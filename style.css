@@ -392,6 +392,15 @@ footer {
     }
 }
 
+.menu-section {
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+}
+
+.menu-section img {
+    width: 100%;
+}
+
 .reviews-section {
     max-width: 1200px;
     margin: 0 auto 30px auto;
