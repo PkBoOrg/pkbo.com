@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke Boa</title>
+	<meta name="description" content="Le meilleur Poke Bowl de Poissy en Livraison !">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="icon" href="https://cdn.pokeboa.com/image/logo/favicon/poke-boa.ico" type="image/x-icon" />
+
+    <script>
+		function showElement(id) {
+			var element = document.getElementById(id);
+			if (element !== null) {
+				element.style.display = 'block';
+			}
+		}
+		
+		function hideElement(id) {
+			var element = document.getElementById(id);
+			if (element !== null) {
+				element.style.display = 'none';
+			}
+		}
+	
+        window.onload = function () {
+			var anchor = '#';
+            if (typeof location.hash === 'string' && location.hash.length > 0) {
+                if (location.hash.toLowerCase().indexOf('ubereats') >= 0) {
+					showElement('link-ubereats');
+					showElement('link-instruction');
+					anchor = location.hash;
+				} else if (location.hash.toLowerCase().indexOf('deliveroo') >= 0) {
+					showElement('link-deliveroo');
+					showElement('link-instruction');
+					anchor = location.hash;
+				}
+			}
+			
+            var reviewBad = document.getElementById('review-bad');
+			if (reviewBad !== null) {
+				reviewBad.addEventListener('click', function () {
+					hideElement('form');
+					showElement('result-bad');
+				});
+				reviewBad.setAttribute('href', anchor);
+			}
+            var reviewAverage = document.getElementById('review-average');
+			if (reviewAverage !== null) {
+				reviewAverage.addEventListener('click', function () {
+					hideElement('form');
+					showElement('result-average');
+				});
+				reviewAverage.setAttribute('href', anchor);
+			}
+            var reviewGood = document.getElementById('review-good');
+			if (reviewGood !== null) {
+				reviewGood.addEventListener('click', function () {
+					hideElement('form');
+					showElement('result-good');
+				});
+				reviewGood.setAttribute('href', anchor);
+			}
+        };
+    </script>
+</head>
+<body>
+    <a id="profilePicture" href="https://pokeboa.com">
+        <img src="https://cdn.pokeboa.com/image/logo/square/300w/poke-boa.png" alt="Poke Boa Logo">
+    </a>
+
+    <div id="app" style="display:none">
+        Poké Boa
+    </div>
+
+    <div class="description">
+		<div id="form">
+			<p>Comment était votre commande ?</p>
+			<p>
+				<span><a id="review-bad" href="#"><img src="https://cdn.pokeboa.com/image/website/icon/bad.png" width="80px" /></a></span>
+				<span><a id="review-average" href="#"><img src="https://cdn.pokeboa.com/image/website/icon/average.png" width="80px" /></a></span>
+				<span><a id="review-good" href="#"><img src="https://cdn.pokeboa.com/image/website/icon/good.png" width="80px" /></a></span>
+			</p>
+		</div>
+		<div id="result-bad" style="display:none;">
+			<p>Nous aurions aimé être à la hauteur de vos attentes</p>
+			<p>Comment pouvons-nous vous aider et nous améliorer ?</p>
+			<p><i>Un probl&egrave;me avec votre commande ? Envoyez-nous un e-mail &agrave; <a href="mailto:bonjour@pokeboa.com">bonjour@pokeboa.com</a>
+			ou appelez-nous au <a href="tel:+33183439836">01 83 43 98 36</a>.</i></p>
+		</div>
+		<div id="result-average" style="display:none;">
+			<p>Nous aurions aimé faire mieux</p>
+			<p>Comment pouvons-nous être à la hauteur de 100% de vos attentes ?</p>
+			<p><i>Dites-nous en plus par e-mail &agrave; <a href="mailto:bonjour@pokeboa.com">bonjour@pokeboa.com</a>.</i></p>
+		</div>
+		<div id="result-good" style="display:none;">
+			<p>Merci</p>
+			<p>⭐⭐⭐⭐⭐</p>
+			<div class="links">		
+				<a id="link-gmb" class="link" href="https://share.google/aGfePn62D5pIpecBL" target="_blank">
+					<i>&nbsp;</i>Partagez votre avis sur Google
+				</a>
+				<a id="link-ubereats" class="link" href="https://www.ubereats.com/fr/store/pokeboa/mZykcx0MXmqgXuPijydJeA" target="_blank">
+					<i>&nbsp;</i>Partagez votre avis sur Uber Eats
+				</a>
+				<a id="link-deliveroo" class="link" href="https://deliveroo.fr/fr/menu/paris/poissy/pokeboa-14-rue-de-la-gare" target="_blank">
+					<i>&nbsp;</i>Partagez votre avis sur Deliveroo
+				</a>
+			
+				<p id="link-instruction" style="text-align:center;font-style:italic;font-size:60%;display:none">
+				(vous devez &ecirc;tre connect&eacute; pour laisser un avis)
+				</p>
+			</div>
+		</div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="links">
+        <a class="link" href="https://pokeboa.com/#contact"><i class="fas fa-envelope">&nbsp;</i>Contactez-nous</a>
+    </div>
+
+    <div id="hashtag">
+        #PokeBoa
+    </div>
+</body>
+</html>
